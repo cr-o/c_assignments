@@ -1,0 +1,7 @@
+#!/bin/sh
+# On Solaris (and perhaps other systems), the command must be "nawk" instead
+# of "awk," or you must have /usr/xpg4/bin in your path before /usr/bin.
+#
+AUPSRC=/Users/cherinoh/aup
+export AUPSRC
+awk -f $AUPSRC/makebuild.awk $AUPSRC/$1/makebuild.spec >$AUPSRC/$1/Makefile

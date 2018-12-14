@@ -1,0 +1,9 @@
+#!/bin/sh
+AUPSRC=/Users/cherinoh/aup
+OS=DARWIN
+SUV=SUV_SUS3
+LIBS="-lncurses"
+TLIBS="-llthread -llgcc_r"
+INCLUDES="-I/usr/local/include/pthread/linuxthreads"
+export AUPSRC OS LIBS TLIBS PTHREADSTUB INCLUDES SUV
+make $2 -f $AUPSRC/$1/Makefile $3
